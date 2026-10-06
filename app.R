@@ -70,7 +70,7 @@ server <- function(input, output, session) {
 
     # Sort the observations and return the result
     # order(d$date) returns the row positions needed to arrange dates from earliest to latest.
-    # Because this is the last expression inside the calculation, R returns it automatically. It becomes the result obtained through observation()
+    # Because this is the last expression inside the calculation, R returns it automatically. It becomes the result obtained through observations()
     # observations stores a reactive expression, not an ordinary data frame. We obtain its result by observations()
     d[order(d$date), , drop = FALSE]
   }
